@@ -14,7 +14,8 @@ module ElegantSoftware
 
     unless file_loaded?(__FILE__)
       menu = UI.menu('Extensions')
-      menu.add_item('Multiface Extrusion') do
+      es_menu = menu.add_submenu('Elegant Software')
+      es_menu.add_item('Multiface Extrusion') do
         self.multi_extrude
       end
       file_loaded(__FILE__)
